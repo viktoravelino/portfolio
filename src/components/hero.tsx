@@ -1,6 +1,8 @@
+import { Button } from "./ui/button";
+
 export function Hero() {
   return (
-    <section className="leading-relaxed flex flex-col gap-10 text-center min-h-[calc(100vh-4rem)] justify-center px-10 md:px-10 md:text-left max-w-5xl mx-auto">
+    <section className="leading-relaxed flex flex-col gap-10 items-center md:items-start text-center min-h-[calc(100vh-4rem)] justify-center px-10 md:px-10 md:text-left max-w-5xl mx-auto">
       <span className="font-bold text-2xl">
         Hey there!👋 Welcome to my website
       </span>
@@ -20,6 +22,11 @@ export function Hero() {
         projects, and if you&apos;d like to chat, don&apos;t hesitate to reach
         out.
       </p>
+
+      <div className="flex gap-4 justify-center md:justify-start">
+        <Button variant="outline">View Projects</Button>
+        <Button>Contact Me</Button>
+      </div>
     </section>
   );
 }
