@@ -9,8 +9,6 @@ export default function Home() {
 
       <main className="px-4 ">
         <Hero />
-
-        {/* <section className="min-h-[calc(100dvh-4rem)]"></section> */}
       </main>
 
       <Footer />
