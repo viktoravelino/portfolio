@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import posthog from "posthog-js";
 import { PropsWithChildren } from "react";
 
 type NavLinkProps = {

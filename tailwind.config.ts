@@ -76,6 +76,9 @@ const config = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      minHeight: {
+        "dvh-header": "calc(100dvh - 4rem)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,15 +1,17 @@
+import Link from "next/link";
 import { Button } from "./ui/button";
+import { Social } from "./social";
 
 export function Hero() {
   return (
-    <section className="leading-relaxed flex flex-col gap-10 items-center md:items-start text-center min-h-[calc(100vh-4rem)] justify-center px-10 md:px-10 md:text-left max-w-5xl mx-auto">
+    <section className="leading-relaxed flex flex-col gap-6 items-center md:items-start text-center justify-center md:px-10 md:text-left max-w-5xl mx-auto min-h-dvh-header">
       <span className="font-bold text-2xl">
-        Hey there!👋 Welcome to my website
+        Hey there!👋 <br /> Welcome to my website
       </span>
 
-      <h1 className="text-xl">
+      <h1 className="text-xl ">
         I&apos;m{" "}
-        <span className="font-extrabold text-4xl">
+        <span className="font-extrabold text-3xl">
           <span className="text-primary">Viktor</span> Avelino!
         </span>
       </h1>
@@ -23,9 +25,16 @@ export function Hero() {
         out.
       </p>
 
-      <div className="flex gap-4 justify-center md:justify-start">
-        <Button variant="outline">View Projects</Button>
-        <Button>Contact Me</Button>
+      <Social iconSize={10} />
+
+      <div className="flex gap-4 justify-center md:justify-start flex-col w-full md:flex-row">
+        <Button variant="outline" size="lg">
+          <Link href="#">View Projects</Link>
+        </Button>
+
+        <Button asChild size="lg">
+          <Link href="#">Contact Me</Link>
+        </Button>
       </div>
     </section>
   );

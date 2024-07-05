@@ -10,7 +10,7 @@ const links = [
 
 export function Header() {
   return (
-    <header className="flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
+    <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6 justify-between">
       <Link href="#">
         <span className="text-2xl font-extrabold">
           <strong className="text-primary">Viktor</strong> Avelino

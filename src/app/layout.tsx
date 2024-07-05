@@ -3,6 +3,8 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
+import { CSPostHogProvider } from "./providers";
+import PostHogPageView from "./PostHogPageView";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -21,14 +23,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}
-      >
-        {children}
-      </body>
+      <CSPostHogProvider>
+        <body
+          className={cn(
+            "bg-background font-sans antialiased min-h-dvh",
+            fontSans.variable
+          )}
+        >
+          <PostHogPageView />
+          {children}
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
