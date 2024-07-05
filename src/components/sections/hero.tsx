@@ -1,10 +1,13 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
-import { Social } from "./social";
+import { Button } from "../ui/button";
+import { Social } from "../social";
 
 export function Hero() {
   return (
-    <section className="leading-relaxed flex flex-col gap-6 items-center md:items-start text-center justify-center md:px-10 md:text-left max-w-5xl mx-auto min-h-dvh-header">
+    <section
+      id="hero"
+      className="leading-relaxed flex flex-col gap-6 items-center md:items-start text-center justify-center md:px-10 md:text-left max-w-5xl mx-auto min-h-screen-header"
+    >
       <span className="font-bold text-2xl">
         Hey there!👋 <br /> Welcome to my website
       </span>

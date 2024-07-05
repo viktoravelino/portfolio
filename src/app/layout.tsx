@@ -3,7 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
-import { CSPostHogProvider } from "../components/providers";
+import { CSPostHogProvider } from "../providers/providers";
 import PostHogPageView from "../components/PostHogPageView";
 import { Suspense } from "react";
 
