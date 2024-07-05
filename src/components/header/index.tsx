@@ -5,7 +5,7 @@ import { NavMobile } from "./nav-mobile";
 const links = [
   { name: "Home", href: "#" },
   { name: "About", href: "#" },
-  { name: "Contact", href: "#" },
+  { name: "Contact!", href: "#" },
 ];
 
 export function Header() {
