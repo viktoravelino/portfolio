@@ -48,9 +48,9 @@ export function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen-header py-20 max-w-4xl mx-auto flex items-center justify-center"
+      className="min-h-screen-header bg-background py-20 max-w-screen-2xl  mx-auto flex items-center justify-center"
     >
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-12">
         {projects.map((project) => {
           return <ProjectCard key={project.name} project={project} />;
         })}

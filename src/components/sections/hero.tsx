@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="leading-relaxed flex flex-col gap-6 items-center md:items-start text-center justify-center md:px-10 md:text-left max-w-5xl mx-auto min-h-screen-header"
+      className="bg-background leading-relaxed flex flex-col gap-6 items-center md:items-start text-center justify-center md:px-10 md:text-left max-w-screen-2xl mx-auto min-h-screen-header"
     >
       <span className="font-bold text-2xl">
         Hey there!👋 <br /> Welcome to my website
@@ -18,7 +18,7 @@ export function Hero() {
           <span className="text-primary">Viktor</span> Avelino!
         </span>
       </h1>
-      <p className="text-xl max-w-xl">
+      <p className="text-xl max-w-3xl">
         I&apos;m a Full Stack Software Developer with a focus on{" "}
         <b className="text-primary"> React</b>,
         <b className="text-primary"> Angular</b>, and{" "}
@@ -31,8 +31,8 @@ export function Hero() {
       <Social iconSize={10} />
 
       <div className="flex gap-4 justify-center md:justify-start flex-col w-full md:flex-row">
-        <Button variant="outline" size="lg">
-          <Link href="#">View Projects</Link>
+        <Button variant="outline" size="lg" asChild>
+          <Link href="#projects">View Projects</Link>
         </Button>
 
         <Button asChild size="lg">

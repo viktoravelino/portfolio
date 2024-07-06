@@ -39,13 +39,10 @@ type ProjectCardProps = {
     github: string;
   };
 };
-
+//md:col-span-6 xl:col-span-3
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card
-      key={project.name}
-      className="overflow-hidden md:col-span-6 lg:col-span-4 flex flex-col"
-    >
+    <Card key={project.name} className="overflow-hidden md:col-span-2 lg:col-span-4 xl:col-span-3 flex flex-col">
       <div className="p-1">
         <div className="relative w-full aspect-video overflow-hidden rounded-lg">
           <Image src={project.img} alt={project.name} fill />
