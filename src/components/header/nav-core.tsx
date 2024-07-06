@@ -1,34 +1,44 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { useActiveNavSection } from "@/providers/nav-provider";
+import { useActiveNavSection } from "@/hooks/use-active-nav-section";
 import Link from "next/link";
-import posthog from "posthog-js";
-import { PropsWithChildren } from "react";
+import { cloneElement, Fragment, PropsWithChildren, ReactNode } from "react";
+import { SheetClose } from "../ui/sheet";
 
 type NavLinkProps = {
   href: string;
   className?: string;
   active?: boolean;
+  mobile?: boolean;
 };
 
 function NavLink(props: PropsWithChildren<NavLinkProps>) {
+  const Wrapper = props.mobile
+    ? (props: { children: ReactNode }) => (
+        <SheetClose asChild>{props.children}</SheetClose>
+      )
+    : Fragment;
+
   return (
-    <Link
-      href={props.href}
-      className={cn(
-        "text-muted-foreground transition-colors hover:text-foreground",
-        props.active && "text-primary",
-        props.className
-      )}
-    >
-      {props.children}
-    </Link>
+    <Wrapper>
+      <Link
+        href={props.href}
+        className={cn(
+          "text-muted-foreground transition-colors hover:text-foreground",
+          props.active && "text-primary",
+          props.className
+        )}
+      >
+        {props.children}
+      </Link>
+    </Wrapper>
   );
 }
 
 type NavCoreProps = {
   links: Array<{ name: string; href: string }>;
+  mobile?: boolean;
 };
 
 export function NavCore(props: NavCoreProps) {
@@ -41,6 +51,7 @@ export function NavCore(props: NavCoreProps) {
           key={link.href}
           href={link.href}
           active={activeSection === link.href}
+          mobile={props.mobile}
         >
           {link.name}
         </NavLink>
