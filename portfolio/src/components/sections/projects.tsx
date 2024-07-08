@@ -30,7 +30,7 @@ const projects: Array<{
   // },
   {
     name: "API Client",
-    img: "https://raw.githubusercontent.com/viktoravelino/portfolio/tree/main/api-client/ScreenShot.png",
+    img: "https://raw.githubusercontent.com/viktoravelino/portfolio/main/api-client/thumb.png",
     desc: "API Client is a simple API client built with React and Axios.",
     liveUrl: "https://api-client.viktoravelino.com/",
     github: "https://github.com/viktoravelino/portfolio/tree/main/api-client",
