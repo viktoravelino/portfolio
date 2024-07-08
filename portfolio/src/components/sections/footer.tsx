@@ -1,5 +1,5 @@
 import { Coffee } from "lucide-react";
-import { Social } from "./social";
+import { Social } from "../social";
 
 export function Footer() {
   return (

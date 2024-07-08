@@ -1,5 +1,13 @@
 import { Button } from "../ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 import { Menu } from "lucide-react";
 import { NavCore } from "./nav-core";
 
@@ -18,7 +26,12 @@ export function NavMobile(props: NavMobileProps) {
           </Button>
         </SheetTrigger>
         <SheetContent side="right">
-          <NavCore links={props.links} />
+          <SheetHeader className="sr-only">
+            <SheetTitle>Menu</SheetTitle>
+            <SheetDescription>Navigation</SheetDescription>
+          </SheetHeader>
+
+          <NavCore links={props.links} mobile={true} />
         </SheetContent>
       </Sheet>
     </>

@@ -77,7 +77,7 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       minHeight: {
-        "dvh-header": "calc(100dvh - 4rem)",
+        "screen-header": "calc(100vh - 4rem)",
       },
     },
   },

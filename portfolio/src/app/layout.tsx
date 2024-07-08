@@ -3,8 +3,9 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
-import { CSPostHogProvider } from "./providers";
-import PostHogPageView from "./PostHogPageView";
+import { CSPostHogProvider } from "../providers/providers";
+import PostHogPageView from "../components/PostHogPageView";
+import { Suspense } from "react";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -30,7 +31,9 @@ export default function RootLayout({
             fontSans.variable
           )}
         >
-          <PostHogPageView />
+          <Suspense>
+            <PostHogPageView />
+          </Suspense>
           {children}
         </body>
       </CSPostHogProvider>
