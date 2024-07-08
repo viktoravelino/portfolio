@@ -34,6 +34,7 @@ export default function RootLayout({
           <Suspense>
             <PostHogPageView />
           </Suspense>
+
           {children}
         </body>
       </CSPostHogProvider>
