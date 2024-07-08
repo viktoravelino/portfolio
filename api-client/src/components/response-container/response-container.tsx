@@ -29,7 +29,7 @@ export function ResponseContainer() {
         </TabsList>
 
         <TabsContent value="body">
-          <Card className="overflow-auto ">
+          <Card className="overflow-auto">
             <CardHeader>
               {response.message && <span>{response.message}</span>}
               <pre>{JSON.stringify(response.data, null, 2)}</pre>
@@ -38,7 +38,7 @@ export function ResponseContainer() {
         </TabsContent>
 
         <TabsContent value="headers">
-          <Card>
+          <Card className="overflow-auto">
             <CardHeader>
               <pre>{JSON.stringify(response.headers, null, 2)}</pre>
             </CardHeader>
