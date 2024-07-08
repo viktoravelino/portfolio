@@ -30,18 +30,18 @@ const projects: Array<{
   // },
   {
     name: "API Client",
-    img: "https://raw.githubusercontent.com/viktoravelino/postman-clone/main/src/ScreenShot.png",
+    img: "https://raw.githubusercontent.com/viktoravelino/portfolio/tree/main/api-client/ScreenShot.png",
     desc: "API Client is a simple API client built with React and Axios.",
     liveUrl: "https://api-client.viktoravelino.com/",
     github: "https://github.com/viktoravelino/portfolio/tree/main/api-client",
   },
-  {
-    name: "Budget Tracker",
-    img: "https://raw.githubusercontent.com/viktoravelino/budget-tracker/main/Screenshot.png",
-    desc: "The purpose of this app is to track your expenses with budget control.",
-    // liveUrl: "https://viktoravelino.com/budget-tracker/",
-    github: "https://github.com/viktoravelino/budget-tracker",
-  },
+  // {
+  //   name: "Budget Tracker",
+  //   img: "https://raw.githubusercontent.com/viktoravelino/budget-tracker/main/Screenshot.png",
+  //   desc: "The purpose of this app is to track your expenses with budget control.",
+  //   // liveUrl: "https://viktoravelino.com/budget-tracker/",
+  //   github: "https://github.com/viktoravelino/budget-tracker",
+  // },
 ];
 
 export function Projects() {
