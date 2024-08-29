@@ -3,10 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
-import { CSPostHogProvider } from "../providers/providers";
-import PostHogPageView from "../components/PostHogPageView";
-import { Suspense } from "react";
-import Head from "next/head";
+import Script from "next/script";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,27 +22,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <Head>
-        <script
-          defer
-          src="https://umami.vkav.net/script.js"
-          data-website-id="05e6e1ac-7ad4-4bae-9027-a8dd0dbd872f"
-        ></script>
-      </Head>
-      
-      <CSPostHogProvider>
-        <body
-          className={cn(
-            "bg-background font-sans antialiased min-h-dvh",
-            fontSans.variable
-          )}
-        >
-          <Suspense>
-            <PostHogPageView />
-          </Suspense>
-          {children}
-        </body>
-      </CSPostHogProvider>
+      <Script
+        defer
+        src={
+          process.env.NODE_ENV === "production"
+            ? "https://umami.vkav.net/script.js"
+            : ""
+        }
+        data-website-id="05e6e1ac-7ad4-4bae-9027-a8dd0dbd872f"
+      ></Script>
+
+      <body
+        className={cn(
+          "bg-background font-sans antialiased min-h-dvh",
+          fontSans.variable
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
