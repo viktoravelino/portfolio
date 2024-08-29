@@ -22,6 +22,7 @@ export function Social({ iconSize = 8, className }: SocialProps) {
         href="https://github.com/viktoravelino"
         target="_blank"
         className="hover:text-primary transition-colors"
+        data-umami-event="Github clicked"
       >
         <GitHubLogoIcon data-attr="github" className={sizeMap[iconSize]} />
       </Link>
@@ -30,6 +31,7 @@ export function Social({ iconSize = 8, className }: SocialProps) {
         href="https://www.linkedin.com/in/viktoravelino"
         target="_blank"
         className="hover:text-primary transition-colors"
+        data-umami-event="LinkedIn clicked"
       >
         <LinkedInLogoIcon className={sizeMap[iconSize]} />
       </Link>
@@ -37,6 +39,7 @@ export function Social({ iconSize = 8, className }: SocialProps) {
       <Link
         href="mailto:viktor.avelino@gmail.com"
         className="hover:text-primary transition-colors"
+        data-umami-event="Mail clicked"
       >
         <MailIcon className={sizeMap[iconSize]} />
       </Link>
