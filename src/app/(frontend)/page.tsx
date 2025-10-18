@@ -19,7 +19,6 @@ export default function Home() {
       <p className="mb-8 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-xl">
         We&apos;re working hard to bring you an exceptional experience. Our team
         is crafting something special that we can&apos;t wait to share with you.
-        
       </p>
 
       <div className="flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
